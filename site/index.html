@@ -78,6 +78,10 @@ h1 .dti .ch:nth-child(3){--g:255,40,80;color:#FF3B5F}
   50%{text-shadow:0 0 8px rgba(var(--g),1),0 0 24px rgba(var(--g),.8),0 0 52px rgba(var(--g),.55)}
 }
 .lead{margin:0;font-size:20px;line-height:1.55;color:#F0DCD8;max-width:560px}
+/* The tagline: one line wherever it fits at a readable size (script sets the size); otherwise
+   it splits after "One Community," and keeps "One Digital Hub for [word]" together. */
+.lead .keep{white-space:nowrap}
+.lead.one-line{max-width:none;white-space:nowrap}
 /* The rotating word sits at the end of the lead line, sized to the line's text. */
 .rot-word{display:inline-flex;vertical-align:middle;margin-left:4px;overflow:hidden;height:1.5em;padding:0 .6em;font-size:.85em;border-radius:8px;background:rgba(255,193,45,.16);border:1px solid rgba(255,193,45,.45);color:var(--yellow);font-weight:800;align-items:center}
 @keyframes swap{from{opacity:0;transform:translateY(60%)}to{opacity:1;transform:none}}
@@ -179,7 +183,7 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
     <div class="hero-copy">
       <span class="pill r1"><span class="bars"><i style="background:var(--cyan)"></i><i style="background:var(--crimson)"></i><i style="background:var(--yellow)"></i></span>Reshaping how Africa learns, works and leads the future</span>
       <h1 class="r2" aria-label="Welcome to the DTI Digital Campus"><span class="line pre" data-split>Welcome to the</span><span class="line big" id="h1-fit"><span class="dti" data-split>DTI</span><span class="sp"></span><span class="word" data-split>Digital</span></span><span class="line big"><span class="word" data-split>Campus</span></span></h1>
-      <p class="lead r3">One Platform, One Community, One Digital Hub for <span class="rot-word" aria-live="polite"><span id="rot">Learners</span></span></p>
+      <p class="lead r3" id="tagline">One Platform, One Community, <span class="keep">One Digital Hub for <span class="rot-word" aria-live="polite"><span id="rot">Learners</span></span></span></p>
       <span class="secure r4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFC12D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z M9 12l2 2 4-4"/></svg>Secure single sign-on with your DTI Microsoft 365 account</span>
     </div>
 
@@ -234,6 +238,31 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
   else { window.addEventListener('resize', fitHeadline); }
 
   var words = ['Learners', 'Faculty', 'Staff', 'Medical teams', 'Management'];
+
+  // The tagline goes on one line, sized to fit with its longest rotating word (up to 20px).
+  // Where that would mean text smaller than 15px (phones), it wraps after "One Community,".
+  var tagline = document.getElementById('tagline');
+  function fitTagline() {
+    var box = tagline.parentElement;
+    var probe = tagline.cloneNode(true);
+    probe.removeAttribute('id');
+    probe.style.cssText = 'position:absolute;visibility:hidden;left:0;top:0;white-space:nowrap;max-width:none;font-size:20px;animation:none';
+    var longest = words.reduce(function (a, b) { return b.length > a.length ? b : a; });
+    probe.querySelector('.rot-word span').textContent = longest;
+    box.appendChild(probe);
+    var size = Math.min(20, 20 * box.clientWidth / probe.offsetWidth);
+    box.removeChild(probe);
+    if (size >= 15) {
+      tagline.classList.add('one-line');
+      tagline.style.fontSize = Math.floor(size * 10) / 10 + 'px';
+    } else {
+      tagline.classList.remove('one-line');
+      tagline.style.fontSize = '';
+    }
+  }
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitTagline); } else { fitTagline(); }
+  if (window.ResizeObserver) { new ResizeObserver(fitTagline).observe(tagline.parentElement); }
+  else { window.addEventListener('resize', fitTagline); }
   var i = 0, rot = document.getElementById('rot');
   setInterval(function () {
     i = (i + 1) % words.length;
