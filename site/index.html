@@ -99,6 +99,10 @@ h1 .dti .ch:nth-child(3){--g:255,40,80;color:#FF3B5F}
 .card .text span{font-size:14px;color:#F0DCD8;line-height:1.45}
 .card .arrow{font-size:22px;font-weight:800;transition:transform .32s}
 .card:hover .arrow{transform:translateX(6px)}
+.card.soon{cursor:default}
+.card.soon:hover{transform:none;background:rgba(31,6,4,.58);border-color:rgba(255,255,255,.3);box-shadow:none}
+.card.soon .icon{opacity:.75}
+.card .badge{flex:0 0 auto;padding:6px 12px;border-radius:999px;background:rgba(0,199,205,.16);border:1px solid rgba(0,199,205,.6);color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .trouble{align-self:flex-start;font-size:13px;font-weight:700;color:#F0DCD8}
 
 @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
@@ -132,6 +136,10 @@ h1 .dti .ch:nth-child(3){--g:255,40,80;color:#FF3B5F}
   .card{padding:18px;gap:16px;border-radius:22px}
   .card .icon{flex-basis:52px;height:52px;border-radius:16px}
   .card .text b{font-size:22px}
+  /* The "Coming soon" badge drops under the text so the description keeps its width. */
+  .card.soon{flex-wrap:wrap;row-gap:10px}
+  .card.soon .text{flex:1 1 calc(100% - 68px);min-width:0}
+  .card.soon .badge{order:3;margin-left:68px}
   .bar{padding:10px 16px}
   .brand img{height:40px}
   .brand .divider,.brand .name small{display:none}
@@ -194,11 +202,12 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
         <span class="text"><b>I'm Staff</b><span>Faculty, administration, medical and management</span></span>
         <span class="arrow" aria-hidden="true" style="color:var(--yellow)">→</span>
       </a>
-      <a class="card" data-campus-link href="https://dtighana.sharepoint.com/sites/DTI_DIGITAL_CAMPUS">
+      <!-- The student view isn't open yet: shown, but not a link. -->
+      <div class="card soon" aria-disabled="true">
         <span class="icon" style="background:var(--cyan);color:#003E40"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z M6 11v5c3 2.5 9 2.5 12 0v-5 M22 9v6"/></svg></span>
         <span class="text"><b>I'm a Student</b><span>Learners on all DTI programmes and short courses</span></span>
-        <span class="arrow" aria-hidden="true" style="color:var(--cyan)">→</span>
-      </a>
+        <span class="badge">Coming soon</span>
+      </div>
       <a class="trouble" href="https://support.dtiafrica.edu.gh/">Trouble signing in? Get help →</a>
     </div>
   </div>
