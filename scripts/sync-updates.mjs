@@ -14,7 +14,7 @@ const { M365_TENANT_ID: tenant, M365_CLIENT_ID: clientId, ACTIONS_ID_TOKEN_REQUE
 const SITE_ID = 'dtighana.sharepoint.com,156edcc1-8234-460c-af79-11c32e7fbeb8,a768dbd3-cc50-47ce-b70c-c3908bb9800b';
 const LIST_ID = 'cbe09185-4da7-42ea-95a2-ff3d8857b161';
 const OUT = new URL('../site/updates.json', import.meta.url);
-const MAX_ITEMS = 10;
+const MAX_ITEMS = 12;
 const COLOURS = ['gold', 'cyan', 'orange', 'crimson', 'blue', 'maroon'];
 
 if (!tenant || !clientId) {
