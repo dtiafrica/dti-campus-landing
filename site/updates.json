@@ -3,7 +3,63 @@
   "items": [
     {
       "text": "Road safety: know the 12 Traffitech offences and penalties before you drive",
-      "colour": "crimson"
+      "colour": "gold",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Speeding: ₵120 – ₵300 fine or up to 30 days' imprisonment, or both",
+      "colour": "crimson",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Jumping a red light: ₵120 – ₵360 fine or up to 30 days' imprisonment, or both",
+      "colour": "cyan",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Using a mobile phone while driving: up to ₵600 fine or up to 3 months' imprisonment, or both",
+      "colour": "orange",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Failing to wear a seat belt: ₵120 – ₵600 fine or up to 8 months' imprisonment, or both",
+      "colour": "cyan",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Failing to stop or yield at stop / yield signs: ₵120 – ₵360 fine or up to 30 days' imprisonment, or both",
+      "colour": "blue",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Overtaking at a pedestrian crossing: ₵120 – ₵300 fine or up to 30 days' imprisonment, or both",
+      "colour": "crimson",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Disobeying traffic signs, barricades or road instructions: ₵120 – ₵300 fine or up to 30 days' imprisonment, or both",
+      "colour": "gold",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Obstructing an intersection or pedestrian crossing: ₵120 – ₵300 fine or up to 30 days' imprisonment, or both",
+      "colour": "orange",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Driving on the shoulder of the road: ₵120 – ₵300 fine or up to 30 days' imprisonment, or both",
+      "colour": "cyan",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Riding without a helmet or reflective clothing: ₵300 – ₵600 fine or 1 – 3 months' imprisonment, or both",
+      "colour": "blue",
+      "until": "2026-11-13"
+    },
+    {
+      "text": "Driving on railways: ₵60 – ₵300 fine or up to 30 days' imprisonment, or both",
+      "colour": "crimson",
+      "until": "2026-11-13"
     }
   ]
 }
