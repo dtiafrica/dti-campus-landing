@@ -204,12 +204,12 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
         <span class="text"><b>I'm Staff</b><span>Faculty, administration, medical and management</span></span>
         <span class="arrow" aria-hidden="true" style="color:var(--yellow)">→</span>
       </a>
-      <!-- The student view isn't open yet: shown, but not a link. -->
-      <div class="card soon" aria-disabled="true">
+      <!-- Students have their own portal, a separate site (opened 21 November 2026). -->
+      <a class="card" href="https://dtighana.sharepoint.com/sites/DTI_STUDENT_CAMPUS">
         <span class="icon" style="background:var(--cyan);color:#003E40"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z M6 11v5c3 2.5 9 2.5 12 0v-5 M22 9v6"/></svg></span>
         <span class="text"><b>I'm a Student</b><span>Learners on all DTI programmes and short courses</span></span>
-        <span class="badge">Coming soon</span>
-      </div>
+        <span class="arrow" aria-hidden="true" style="color:var(--cyan)">→</span>
+      </a>
       <a class="trouble" href="https://support.dtiafrica.edu.gh/">Trouble signing in? Get help →</a>
     </div>
   </div>
@@ -221,8 +221,8 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
 </div>
 
 <script>
-  // Where the Staff, Student and Sign in buttons go. Microsoft 365 handles sign-in,
-  // then the Digital Campus shows the right view from the person's security group.
+  // Where the Staff card goes (the Student card links to the student portal, a separate
+  // site; Sign in scrolls to both). Microsoft 365 handles sign-in on each site.
   var CAMPUS_URL = 'https://dtighana.sharepoint.com/sites/DTI_DIGITAL_CAMPUS';
   document.querySelectorAll('[data-campus-link]').forEach(function (a) { a.href = CAMPUS_URL; });
 
