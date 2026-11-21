@@ -7,18 +7,18 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>DTI Digital Campus — Design &amp; Technology Institute</title>
 <meta name="description" content="The DTI Digital Campus: one secure workspace for learners, faculty and staff of the Design & Technology Institute.">
-<link rel="icon" type="image/png" href="assets/dti-logo.png">
+<link rel="icon" type="image/png" href="assets/dti-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Big+Shoulders+Display:wght@700..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--maroon:#5F1510;--maroon-dk:#2E0907;--crimson:#C4002C;--blue:#2949AA;--cyan:#00C7CD;--orange:#FF8825;--yellow:#FFC12D;--ink:#1C1412;--muted:#4F4441}
+:root{--maroon:#5F1510;--maroon-dk:#2E0907;--crimson:#C82A37;--blue:#1E4FA3;--cyan:#2FBFC8;--orange:#F6882D;--yellow:#FFC230;--green:#5BA84F;--plum:#6A1448;--violet:#A87CBA;--ink:#1C1412;--muted:#4F4441}
 *{box-sizing:border-box}
 html,body{margin:0}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--maroon-dk);display:flex;flex-direction:column;min-height:100vh}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-.stripe{height:5px;background:linear-gradient(90deg,var(--cyan) 0 16.66%,var(--maroon) 16.66% 33.33%,var(--blue) 33.33% 50%,var(--crimson) 50% 66.66%,var(--orange) 66.66% 83.33%,var(--yellow) 83.33% 100%)}
+.stripe{height:5px;background:linear-gradient(90deg,var(--crimson) 0 12.5%,var(--blue) 12.5% 25%,var(--cyan) 25% 37.5%,var(--orange) 37.5% 50%,var(--yellow) 50% 62.5%,var(--green) 62.5% 75%,var(--plum) 75% 87.5%,var(--violet) 87.5% 100%)}
 
 /* header */
 /* Frosted glass over the drifting campus photo, the same as the Digital Campus header. */
@@ -83,7 +83,7 @@ h1 .dti .ch:nth-child(3){--g:255,40,80;color:#FF3B5F}
 .lead .keep{white-space:nowrap}
 .lead.one-line{max-width:none;white-space:nowrap}
 /* The rotating word sits at the end of the lead line, sized to the line's text. */
-.rot-word{display:inline-flex;vertical-align:middle;margin-left:4px;overflow:hidden;height:1.5em;padding:0 .6em;font-size:.85em;border-radius:8px;background:rgba(255,193,45,.16);border:1px solid rgba(255,193,45,.45);color:var(--yellow);font-weight:800;align-items:center}
+.rot-word{display:inline-flex;vertical-align:middle;margin-left:4px;overflow:hidden;height:1.5em;padding:0 .6em;font-size:.85em;border-radius:8px;background:rgba(255,194,48,.16);border:1px solid rgba(255,194,48,.45);color:var(--yellow);font-weight:800;align-items:center}
 @keyframes swap{from{opacity:0;transform:translateY(60%)}to{opacity:1;transform:none}}
 .rot-word span{display:inline-block;animation:swap .55s cubic-bezier(.2,.7,.2,1) both}
 .secure{display:flex;align-items:center;gap:10px;font-size:13px;color:#D8B9B4;font-weight:600}
@@ -92,7 +92,7 @@ h1 .dti .ch:nth-child(3){--g:255,40,80;color:#FF3B5F}
 .cards{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:14px}
 .cards .label{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--yellow)}
 .card{display:flex;align-items:center;gap:18px;padding:22px;border-radius:24px;background:rgba(31,6,4,.58);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);color:#FFF;text-decoration:none;transition:transform .32s cubic-bezier(.2,.7,.2,1),background .32s,border-color .32s,box-shadow .32s}
-.card:hover{transform:translateY(-6px);background:rgba(46,9,7,.72);border-color:rgba(255,193,45,.7);box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+.card:hover{transform:translateY(-6px);background:rgba(46,9,7,.72);border-color:rgba(255,194,48,.7);box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
 .card .icon{flex:0 0 60px;height:60px;border-radius:18px;display:flex;align-items:center;justify-content:center}
 .card .text{flex:1;display:flex;flex-direction:column;gap:4px}
 .card .text b{font-family:'Big Shoulders Display',system-ui,sans-serif;font-size:26px;line-height:1;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
@@ -102,7 +102,7 @@ h1 .dti .ch:nth-child(3){--g:255,40,80;color:#FF3B5F}
 .card.soon{cursor:default}
 .card.soon:hover{transform:none;background:rgba(31,6,4,.58);border-color:rgba(255,255,255,.3);box-shadow:none}
 .card.soon .icon{opacity:.75}
-.card .badge{flex:0 0 auto;padding:6px 12px;border-radius:999px;background:rgba(0,199,205,.16);border:1px solid rgba(0,199,205,.6);color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.card .badge{flex:0 0 auto;padding:6px 12px;border-radius:999px;background:rgba(47,191,200,.16);border:1px solid rgba(47,191,200,.6);color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .trouble{align-self:flex-start;font-size:13px;font-weight:700;color:#F0DCD8}
 
 @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
@@ -113,9 +113,9 @@ h1 .dti .ch:nth-child(3){--g:255,40,80;color:#FF3B5F}
 
 /* live ticker */
 .ticker-wrap[hidden]{display:none}
-.ticker-wrap{flex:0 0 auto;position:relative;z-index:3;background:#1F0604;color:#F0DCD8;display:flex;align-items:center;overflow:hidden;height:48px;border-top:1px solid rgba(255,193,45,.25)}
+.ticker-wrap{flex:0 0 auto;position:relative;z-index:3;background:#1F0604;color:#F0DCD8;display:flex;align-items:center;overflow:hidden;height:48px;border-top:1px solid rgba(255,194,48,.25)}
 .live{position:relative;z-index:2;flex:0 0 auto;display:flex;align-items:center;gap:8px;height:100%;padding:0 18px 0 28px;background:var(--crimson);color:#FFF;font-size:12px;font-weight:800;letter-spacing:.1em}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,193,45,.6)}100%{box-shadow:0 0 0 12px rgba(255,193,45,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,194,48,.6)}100%{box-shadow:0 0 0 12px rgba(255,194,48,0)}}
 .live i{width:8px;height:8px;border-radius:50%;background:var(--yellow);animation:pulse 2.2s infinite}
 @keyframes tick{to{transform:translateX(-50%)}}
 .ticker{display:flex;width:max-content;animation:tick 48s linear infinite}
@@ -192,7 +192,7 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
       <span class="pill r1"><span class="bars"><i style="background:var(--cyan)"></i><i style="background:var(--crimson)"></i><i style="background:var(--yellow)"></i></span>Reshaping how Africa learns, works and leads the future</span>
       <h1 class="r2" aria-label="Welcome to the DTI Digital Campus"><span class="line pre" data-split>Welcome to the</span><span class="line big" id="h1-fit"><span class="dti" data-split>DTI</span><span class="sp"></span><span class="word" data-split>Digital</span></span><span class="line big"><span class="word" data-split>Campus</span></span></h1>
       <p class="lead r3" id="tagline">One Platform, One Community, <span class="keep">One Digital Hub for <span class="rot-word" aria-live="polite"><span id="rot">Learners</span></span></span></p>
-      <span class="secure r4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFC12D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z M9 12l2 2 4-4"/></svg>Secure single sign-on with your DTI Microsoft 365 account</span>
+      <span class="secure r4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFC230" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z M9 12l2 2 4-4"/></svg>Secure single sign-on with your DTI Microsoft 365 account</span>
     </div>
 
     <div class="cards r3">
@@ -281,7 +281,7 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
 
   // The ticker's items live in updates.json, kept up to date from SharePoint (the
   // "Landing Updates" list and ticked Events). With nothing to show, the ticker stays hidden.
-  var COLOURS = { gold: '#FFC12D', cyan: '#00C7CD', orange: '#FF8825', crimson: '#C4002C', blue: '#2949AA', maroon: '#8E2219' };
+  var COLOURS = { gold: '#FFC230', cyan: '#2FBFC8', orange: '#F6882D', crimson: '#C82A37', blue: '#1E4FA3', maroon: '#8E2219' };
   fetch('updates.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : { items: [] }; })
     .then(function (data) {
@@ -308,11 +308,11 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <!-- "Welcome to the": Spice body (yellow to red) and its reversed line (red-orange to yellow) -->
-    <linearGradient id="g-pre-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC12D"/><stop offset=".4" stop-color="#FF9A1A"/><stop offset=".7" stop-color="#FF6A12"/><stop offset="1" stop-color="#D91C1A"/></linearGradient>
+    <linearGradient id="g-pre-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC230"/><stop offset=".4" stop-color="#FF9A1A"/><stop offset=".7" stop-color="#FF6A12"/><stop offset="1" stop-color="#D91C1A"/></linearGradient>
     <!-- A light cream line, like "Digital Campus", so it shows clearly against the gold-to-red letter. -->
     <linearGradient id="g-pre-line" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF7D6"/><stop offset="1" stop-color="#FFE58C"/></linearGradient>
     <!-- "Digital Campus": the current gold-to-crimson body; the line runs the other way -->
-    <linearGradient id="g-word-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".38" stop-color="#FFC12D"/><stop offset=".7" stop-color="#FF8825"/><stop offset="1" stop-color="#C4002C"/></linearGradient>
+    <linearGradient id="g-word-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".38" stop-color="#FFC230"/><stop offset=".7" stop-color="#F6882D"/><stop offset="1" stop-color="#C82A37"/></linearGradient>
     <linearGradient id="g-word-line" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF7A2A"/><stop offset=".5" stop-color="#FFC24A"/><stop offset="1" stop-color="#FFF0B0"/></linearGradient>
     <!-- Thin inner line: shrink the letter twice and keep the band between (radii set by script).
          One filter for the big letters and one for "Welcome to the", which is smaller. -->

@@ -12,14 +12,14 @@
 <style>
 /* The ticker on its own, for embedding in SharePoint (Embed web part) next to the
    landing page's copy. Both read the same updates.json, so they never disagree. */
-:root{--crimson:#C4002C;--yellow:#FFC12D}
+:root{--crimson:#C82A37;--yellow:#FFC230}
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;overflow:hidden;background:transparent}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif}
 .wrap[hidden]{display:none}
-.wrap{position:relative;height:100%;min-height:48px;display:flex;align-items:center;overflow:hidden;background:#1F0604;color:#F0DCD8;border-top:1px solid rgba(255,193,45,.25);border-bottom:1px solid rgba(255,193,45,.25)}
+.wrap{position:relative;height:100%;min-height:48px;display:flex;align-items:center;overflow:hidden;background:#1F0604;color:#F0DCD8;border-top:1px solid rgba(255,194,48,.25);border-bottom:1px solid rgba(255,194,48,.25)}
 .live{position:relative;z-index:2;flex:0 0 auto;display:flex;align-items:center;gap:8px;height:100%;padding:0 18px 0 20px;background:var(--crimson);color:#FFF;font-size:12px;font-weight:800;letter-spacing:.1em}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,193,45,.6)}100%{box-shadow:0 0 0 12px rgba(255,193,45,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,194,48,.6)}100%{box-shadow:0 0 0 12px rgba(255,194,48,0)}}
 .live i{width:8px;height:8px;border-radius:50%;background:var(--yellow);animation:pulse 2.2s infinite}
 @keyframes tick{to{transform:translateX(-50%)}}
 .strip{display:flex;width:max-content;animation:tick 48s linear infinite}
@@ -47,7 +47,7 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif}
 <script>
   // Same items as the landing page: site/updates.json, written from the SharePoint
   // "Landing Updates" list. Nothing to edit here — add or remove rows in that list.
-  var COLOURS = { gold: '#FFC12D', cyan: '#00C7CD', orange: '#FF8825', crimson: '#C4002C', blue: '#2949AA', maroon: '#8E2219' };
+  var COLOURS = { gold: '#FFC230', cyan: '#2FBFC8', orange: '#F6882D', crimson: '#C82A37', blue: '#1E4FA3', maroon: '#8E2219' };
   var wrap = document.getElementById('wrap'), strip = document.getElementById('strip');
 
   function render(data) {
