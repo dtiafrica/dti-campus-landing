@@ -15,6 +15,8 @@
 :root{--maroon:#5F1510;--maroon-dk:#2E0907;--crimson:#C82A37;--blue:#1E4FA3;--cyan:#2FBFC8;--orange:#F6882D;--yellow:#FFC230;--green:#5BA84F;--plum:#6A1448;--violet:#A87CBA;--ink:#1C1412;--muted:#4F4441}
 *{box-sizing:border-box}
 html,body{margin:0}
+html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#sign-in{scroll-margin-top:110px;outline:none}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--maroon-dk);display:flex;flex-direction:column;min-height:100vh}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
@@ -178,7 +180,7 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
     </a>
     <div class="actions">
       <a class="help" href="https://support.dtiafrica.edu.gh/">Help</a>
-      <a class="signin" data-campus-link href="https://dtighana.sharepoint.com/sites/DTI_DIGITAL_CAMPUS"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4 M10 17l5-5-5-5 M15 12H3"/></svg>Sign in</a>
+      <a class="signin" href="#sign-in"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4 M10 17l5-5-5-5 M15 12H3"/></svg>Sign in</a>
     </div>
   </div>
 </header>
@@ -195,7 +197,7 @@ h1 .ch svg.glyph{position:absolute;left:0;top:0;width:100%;height:100%;overflow:
       <span class="secure r4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFC230" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z M9 12l2 2 4-4"/></svg>Secure single sign-on with your DTI Microsoft 365 account</span>
     </div>
 
-    <div class="cards r3">
+    <div class="cards r3" id="sign-in" tabindex="-1">
       <span class="label">SIGN IN TO CONTINUE</span>
       <a class="card" data-campus-link href="https://dtighana.sharepoint.com/sites/DTI_DIGITAL_CAMPUS">
         <span class="icon" style="background:var(--yellow);color:var(--maroon-dk)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3z M8 7V4h8v3 M3 12h18"/></svg></span>
